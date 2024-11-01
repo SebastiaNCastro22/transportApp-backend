@@ -44,4 +44,8 @@ public class ShipmentQueryServiceImpl implements ShipmentQueryService {
     public List<Shipment> handle(GetAllShipmentByRequestIdQuery query) {
         return shipmentRepository.findAllByRequestId(query.requestId());
     }
+    @Override
+    public List<Shipment> handle(GetAllShipmentByTransporterIdQuery query) {
+        return shipmentRepository.findAllByTransporterId(query.transporterId());
+    }
 }
